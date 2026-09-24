@@ -1,0 +1,40 @@
+Algoritmo "Gerador_Tabela_Verdade"
+// Disciplina: Matemática Discreta
+// Descrição: Mostra as operações lógicas básicas (Conjunção, Disjunção e Negação)
+// Autor: Você
+
+Var
+   // Declarando as variáveis lógicas (que aceitam apenas VERDADEIRO ou FALSO)
+   P, Q: logico
+   resultado_E, resultado_OU, resultado_NAO_P: logico
+
+Inicio
+   escreval("=== Gerador de Tabela Verdade ===")
+   escreval("Digite o valor da proposição P (VERDADEIRO ou FALSO): ")
+   leia(P)
+   
+   escreval("Digite o valor da proposição Q (VERDADEIRO ou FALSO): ")
+   leia(Q)
+   
+   // --- Processamento da Matemática ---
+   
+   // Conjunção (E): Só é verdadeiro se AMBOS forem verdadeiros
+   resultado_E <- P E Q
+   
+   // Disjunção (OU): É verdadeiro se PELO MENOS UM for verdadeiro
+   resultado_OU <- P OU Q
+   
+   // Negação (NÃO): Inverte o valor da proposição (se era Verdadeiro vira Falso)
+   resultado_NAO_P <- NAO P
+   
+   //Resultados ---
+   escreval("")
+   escreval("=== Resultados das Operações ===")
+   escreval("P = ", P, " | Q = ", Q)
+   escreval("--------------------------------")
+   escreval("Conjunção (P E Q)   : ", resultado_E)
+   escreval("Disjunção (P OU Q)  : ", resultado_OU)
+   escreval("Negação   (NÃO P)   : ", resultado_NAO_P)
+   escreval("================================")
+
+Fimalgoritmo
