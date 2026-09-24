@@ -1,0 +1,47 @@
+Algoritmo "Intersecao Conjuntos"
+// Disciplina: Matemática Discreta
+// Descrição: Encontra elementos em comum entre dois conjuntos
+
+Var
+   vetorA: vetor[1..5] de inteiro
+   vetorB: vetor[1..5] de inteiro
+   i, j: inteiro
+   encontrou: logico
+
+Inicio
+   escreval("=== Interseção de Dois Conjuntos ===")
+   
+   // Lendo elementos do Conjunto A
+   escreval("Preencha o Conjunto A (5 elementos):")
+   para i de 1 ate 5 faca
+      escreva("Elemento A[", i, "]: ")
+      leia(vetorA[i])
+   fimpara
+   escreval("")
+   
+   // Lendo elementos do Conjunto B
+   escreval("Preencha o Conjunto B (5 elementos):")
+   para i de 1 ate 5 faca
+      escreva("Elemento B[", i, "]: ")
+      leia(vetorB[i])
+   fimpara
+   
+   escreval("------------------------------------")
+   escreval("Interseção (A ∩ B):")
+   
+   encontrou <- falso
+   
+   // Comparando os elementos (dois laços aninhados)
+   para i de 1 ate 5 faca
+      para j de 1 ate 5 faca
+         se (vetorA[i] = vetorB[j]) entao
+            escreval("-> ", vetorA[i])
+            encontrou <- verdadeiro
+         fimse
+      fimpara
+   fimpara
+   
+   se encontrou = falso entao
+      escreval("Não há elementos em comum (Interseção Vazia).")
+   fimse
+Fimalgoritmo
