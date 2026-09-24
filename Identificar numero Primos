@@ -1,0 +1,29 @@
+Algoritmo "Identificar numero Primos"
+// Disciplina: Matemática Discreta
+// Descrição: Verifica se um número é primo (divisível apenas por 1 e por ele mesmo)
+
+Var
+   numero, i, divisores: inteiro
+
+Inicio
+   escreval("=== Identificador de Números Primos ===")
+   escreva("Digite um número inteiro positivo: ")
+   leia(numero)
+   
+   divisores <- 0
+   
+   // Laço de repetição para testar as divisões
+   para i de 1 ate numero faca
+      se (numero MOD i = 0) entao // MOD pega o resto da divisão
+         divisores <- divisores + 1
+      fimse
+   fimpara
+   
+   // Se tiver exatamente 2 divisores (1 e ele mesmo), é primo
+   escreval("---------------------------------------")
+   se (divisores = 2) entao
+      escreval("O número ", numero, " É PRIMO.")
+   senao
+      escreval("O número ", numero, " NÃO É PRIMO.")
+   fimse
+Fimalgoritmo
