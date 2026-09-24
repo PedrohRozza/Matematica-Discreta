@@ -1,0 +1,23 @@
+Algoritmo "Calculadora Fatorial"
+// Disciplina: Matemática Discreta
+// Descrição: Calcula o fatorial de um número (ex: 4! = 4*3*2*1)
+
+Var
+   numero, i: inteiro
+   fatorial: real // Usando 'real' para suportar resultados grandes
+
+Inicio
+   escreval("=== Calculadora de Fatorial ===")
+   escreva("Digite um número para calcular o fatorial: ")
+   leia(numero)
+   
+   fatorial <- 1
+   
+   // Laço decrescente multiplicando os valores
+   para i de numero ate 1 passo -1 faca
+      fatorial <- fatorial * i
+   fimpara
+   
+   escreval("---------------------------------------")
+   escreval("O Fatorial de ", numero, "! é = ", fatorial)
+Fimalgoritmo
