@@ -1,0 +1,38 @@
+Algoritmo "Sequencia Fibonacci"
+// Disciplina: Matemática Discreta
+// Descrição: Gera os N primeiros termos da Sequência de Fibonacci
+
+Var
+   qtd, i, t1, t2, proximo: inteiro
+
+Inicio
+   escreval("=== Sequência de Fibonacci ===")
+   escreva("Quantos termos da sequência você quer ver? ")
+   leia(qtd)
+   
+   // Condições iniciais da relação de recorrência
+   t1 <- 0
+   t2 <- 1
+   
+   escreval("---------------------------------------")
+   escreval("Os primeiros ", qtd, " termos são:")
+   
+   se qtd >= 1 entao
+      escreva(t1)
+   fimse
+   se qtd >= 2 entao
+      escreva(" - ", t2)
+   fimse
+   
+   // A partir do 3º termo, é a soma dos dois anteriores
+   para i de 3 ate qtd faca
+      proximo <- t1 + t2
+      escreva(" - ", proximo)
+      
+      // Atualiza as variáveis para o próximo ciclo
+      t1 <- t2
+      t2 <- proximo
+   fimpara
+   
+   escreval("")
+Fimalgoritmo
